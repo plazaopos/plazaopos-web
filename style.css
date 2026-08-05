@@ -79,7 +79,8 @@ background:white;
 
 color:#161c24;
 
-padding:18px 34px;
+padding:20px 38px;
+font-size:18px;
 
 border-radius:14px;
 
@@ -95,7 +96,8 @@ border:2px solid white;
 
 color:white;
 
-padding:18px 34px;
+padding:20px 38px;
+font-size:18px;
 
 border-radius:14px;
 
@@ -103,9 +105,29 @@ text-decoration:none;
 
 }
 
+.apple,
+.google{
+
+transition:all .25s ease;
+
+}
+
+.apple:hover,
+.google:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+}
+
 .hero-right img{
 
-width:370px;
+width:420px;
+
+max-width:100%;
+
+height:auto;
 
 }
 
