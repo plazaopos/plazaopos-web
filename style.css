@@ -174,3 +174,54 @@ footer p{
 color:#777;
 
 }
+
+
+.page{
+
+max-width:900px;
+
+margin:auto;
+
+padding:80px 30px;
+
+line-height:1.8;
+
+color:#161c24;
+
+}
+
+.page h1{
+
+font-size:48px;
+
+margin-bottom:30px;
+
+}
+
+.page h2{
+
+margin-top:40px;
+
+margin-bottom:15px;
+
+color:#2797FF;
+
+}
+
+.page a{
+
+color:#2797FF;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+.page ul{
+
+margin-left:25px;
+
+margin-top:10px;
+
+}
