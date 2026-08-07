@@ -353,6 +353,48 @@ margin-top:40px;
 
 @media (max-width: 900px) {
 
+.hero-content{
+
+flex-direction:column;
+
+padding:60px 25px;
+
+gap:50px;
+
+text-align:center;
+
+}
+
+.title-row{
+
+justify-content:center;
+
+}
+
+.logo-splash{
+
+height:50px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.apple,
+.google{
+
+max-width:330px;
+
+width:100%;
+
+}
+
+  
 .hero{
 
 flex-direction:column;
