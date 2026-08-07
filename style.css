@@ -22,59 +22,27 @@ width:100%;
 
 .hero-content{
 
-max-width:1450px;
+max-width:1500px;
 
 margin:auto;
 
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
 padding:90px 90px;
-
-gap:90px;
-
-min-height:72vh;
 
 }
 
 .hero-left{
 
-max-width:550px;
+max-width:1350px;
 
 }
 
 
-.title-row{
-
-display:flex;
-
-align-items:center;
-
-gap:22px;
-
-margin-bottom:25px;
-
-}
-
-.logo-splash{
-
-height:62px;
-
-width:auto;
-
-}
 
 
-.logo{
 
-width:90px;
 
-margin-bottom:30px;
 
-}
+
 
 h1{
 
@@ -88,25 +56,35 @@ margin-bottom:0;
 
 .subtitle{
 
-font-size:24px;
+font-size:25px;
 
 line-height:1.6;
 
 color:white;
 
-margin-bottom:50px;
+max-width:980px;
+
+margin:0;
 
 }
 
-.buttons{
+.hero-description{
 
 display:flex;
 
-gap:20px;
+justify-content:space-between;
 
-flex-wrap:wrap;
+align-items:flex-start;
+
+gap:70px;
+
+margin-top:20px;
+
+margin-bottom:55px;
 
 }
+
+
 
 .apple{
 
@@ -114,7 +92,7 @@ background:white;
 
 color:#161c24;
 
-padding:20px 34px;
+padding:18px 34px;
 
 border-radius:14px;
 
@@ -142,7 +120,7 @@ border:2px solid white;
 
 color:white;
 
-padding:20px 34px;
+padding:18px 34px;
 
 border-radius:14px;
 
@@ -164,6 +142,18 @@ white-space:nowrap;
 
 }
 
+.icon{
+
+width:22px;
+
+height:22px;
+
+display:block;
+
+flex-shrink:0;
+
+}
+
 .apple,
 .google{
 
@@ -180,13 +170,6 @@ box-shadow:0 12px 30px rgba(0,0,0,.18);
 
 }
 
-.hero-right img{
-
-width:420px;
-
-max-width:100%;
-
-height:auto;
 
 }
 
@@ -355,6 +338,57 @@ margin-top:40px;
 
 .hero-content{
 
+padding:60px 25px;
+
+}
+
+.hero-description{
+
+flex-direction:column;
+
+align-items:center;
+
+text-align:center;
+
+gap:35px;
+
+}
+
+.logo-splash{
+
+height:180px;
+
+margin:0;
+
+}
+
+.subtitle{
+
+max-width:100%;
+
+font-size:20px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.apple,
+.google{
+
+width:100%;
+
+max-width:340px;
+
+}
+
+.hero-content{
+
 flex-direction:column;
 
 padding:60px 25px;
@@ -373,17 +407,17 @@ justify-content:center;
 
 .logo-splash{
 
-height:50px;
+height:240px;
+
+width:auto;
+
+flex-shrink:0;
+
+margin-right:0px;
 
 }
 
-.buttons{
 
-flex-direction:column;
-
-align-items:center;
-
-}
 
 .apple,
 .google{
@@ -395,19 +429,6 @@ width:100%;
 }
 
   
-.hero{
-
-flex-direction:column;
-
-text-align:center;
-
-padding:60px 25px;
-
-gap:50px;
-
-min-height:auto;
-
-}
 
 .hero-left{
 
@@ -415,15 +436,7 @@ max-width:100%;
 
 }
 
-.logo{
 
-width:80px;
-
-margin:0 auto 25px;
-
-display:block;
-
-}
 
 h1{
 
@@ -447,7 +460,7 @@ margin-bottom:35px;
 
 display:flex;
 
-gap:22px;
+gap:20px;
 
 flex-wrap:nowrap;
 
@@ -470,15 +483,7 @@ text-align:center;
 
 }
 
-.hero-right img{
 
-width:100%;
-
-max-width:320px;
-
-height:auto;
-
-}
 
 .screens{
 
