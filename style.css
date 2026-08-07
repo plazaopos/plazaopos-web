@@ -160,15 +160,16 @@ box-shadow:0 12px 30px rgba(0,0,0,.18);
 
 }
 
-.icon{
+.apple i,
+.google i{
 
-width:22px;
+font-size:22px;
 
-height:22px;
+width:24px;
+
+text-align:center;
 
 flex-shrink:0;
-
-display:block;
 
 }
 
