@@ -15,19 +15,28 @@ color:#161c24;
 .hero{
 
 background:#2797ff;
-min-height:70vh;
 
-display:flex;
-align-items:center;
-justify-content:space-between;
+width:100%;
 
-padding:80px 100px;
+}
 
-gap:100px;
+.hero-content{
 
-max-width:1500px;
+max-width:1450px;
 
 margin:auto;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:90px 90px;
+
+gap:90px;
+
+min-height:72vh;
 
 }
 
@@ -36,6 +45,28 @@ margin:auto;
 max-width:550px;
 
 }
+
+
+.title-row{
+
+display:flex;
+
+align-items:center;
+
+gap:22px;
+
+margin-bottom:25px;
+
+}
+
+.logo-splash{
+
+height:62px;
+
+width:auto;
+
+}
+
 
 .logo{
 
@@ -51,7 +82,7 @@ font-size:72px;
 
 color:white;
 
-margin-bottom:20px;
+margin-bottom:0;
 
 }
 
@@ -83,14 +114,25 @@ background:white;
 
 color:#161c24;
 
-padding:20px 38px;
-font-size:18px;
+padding:20px 34px;
 
 border-radius:14px;
 
-font-weight:bold;
+font-size:18px;
+
+font-weight:600;
 
 text-decoration:none;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:12px;
+
+white-space:nowrap;
 
 }
 
@@ -100,12 +142,25 @@ border:2px solid white;
 
 color:white;
 
-padding:20px 38px;
-font-size:18px;
+padding:20px 34px;
 
 border-radius:14px;
 
+font-size:18px;
+
+font-weight:600;
+
 text-decoration:none;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:12px;
+
+white-space:nowrap;
 
 }
 
@@ -348,13 +403,19 @@ margin-bottom:35px;
 
 .buttons{
 
-justify-content:center;
+display:flex;
 
-flex-direction:column;
+gap:22px;
 
-align-items:center;
+flex-wrap:nowrap;
+
+margin-top:45px;
 
 }
+
+
+
+  
 
 .apple,
 .google{
