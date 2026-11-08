@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Te han compartido un tema · Plazaopos</title>
+<meta name="description" content="Abre este tema subrayado en Plazaopos, la app para preparar tus oposiciones.">
+<meta property="og:title" content="Te han compartido un tema subrayado">
+<meta property="og:description" content="Ábrelo en Plazaopos y estudia con sus subrayados.">
+<meta property="og:site_name" content="Plazaopos">
+<meta name="apple-itunes-app" content="app-id=6802785630">
+<style>
+  :root { --fondo:#F4F7FB; --tarjeta:#fff; --texto:#162433; --suave:#5B6B7C; --azul:#0B67BC; }
+  @media (prefers-color-scheme: dark) { :root { --fondo:#161C24; --tarjeta:#212B36; --texto:#F1F5F9; --suave:#A3B1C2; } }
+  * { box-sizing:border-box; }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+         background:var(--fondo); color:var(--texto); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; padding:24px 16px; }
+  .t { background:var(--tarjeta); border-radius:22px; padding:32px 24px; max-width:420px; width:100%; text-align:center;
+       box-shadow:0 10px 30px rgba(0,0,0,.12); }
+  .i { font-size:46px; margin-bottom:8px; }
+  h1 { font-size:22px; margin:0 0 10px; }
+  p { color:var(--suave); line-height:1.5; margin:0 0 22px; }
+  mark { background:#FFE58A; color:#111; border-radius:4px; padding:0 3px; }
+  a.b { display:block; text-decoration:none; font-weight:700; border-radius:999px; padding:14px; margin-top:10px; }
+  .p { background:var(--azul); color:#fff; }
+  .s { border:1.5px solid var(--azul); color:var(--azul); }
+  small { display:block; margin-top:18px; color:var(--suave); }
+</style>
+</head>
+<body>
+<div class="t">
+  <div class="i">🖍️</div>
+  <h1>Te han compartido un <mark>tema subrayado</mark></h1>
+  <p>Descarga Plazaopos gratis y ábrelo desde este mismo enlace para estudiar con sus subrayados.</p>
+  <a class="b p" id="tienda" href="https://plazaopos.es/">Descargar Plazaopos</a>
+  <a class="b s" id="otra" href="https://plazaopos.es/">Ver la web</a>
+  <small>¿Ya tienes la app? Vuelve a pulsar el enlace que te enviaron.</small>
+</div>
+<script>
+  (function () {
+    var IOS = "https://apps.apple.com/es/app/plazaopos/id6802785630";
+    var ANDROID = "https://play.google.com/store/apps/details?id=es.plazaopos.app";
+    var ua = navigator.userAgent || "";
+    var esIos = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && "ontouchend" in document);
+    var esAndroid = /Android/i.test(ua);
+    var tienda = document.getElementById("tienda"), otra = document.getElementById("otra");
+    if (esIos) { tienda.href = IOS; tienda.textContent = "Descargar en App Store"; }
+    else if (esAndroid) { tienda.href = ANDROID; tienda.textContent = "Descargar en Google Play"; }
+    else { tienda.href = IOS; tienda.textContent = "App Store"; otra.href = ANDROID; otra.textContent = "Google Play"; }
+    // En el móvil, a la tienda directamente tras un instante (si la app estuviera, ni se vería esta página).
+    if (esIos || esAndroid) setTimeout(function () { location.href = tienda.href; }, 1200);
+  })();
+</script>
+</body>
+</html>
