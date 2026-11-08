@@ -31,24 +31,40 @@
 <div class="t">
   <div class="i">🖍️</div>
   <h1>Te han compartido un <mark>tema subrayado</mark></h1>
-  <p>Descarga Plazaopos gratis y ábrelo desde este mismo enlace para estudiar con sus subrayados.</p>
-  <a class="b p" id="tienda" href="https://plazaopos.es/">Descargar Plazaopos</a>
-  <a class="b s" id="otra" href="https://plazaopos.es/">Ver la web</a>
-  <small>¿Ya tienes la app? Vuelve a pulsar el enlace que te enviaron.</small>
+  <p id="txt">Ábrelo en Plazaopos para estudiar con sus subrayados.</p>
+  <a class="b p" id="abrir" href="#">Abrir en Plazaopos</a>
+  <a class="b s" id="tienda" href="https://plazaopos.es/">Descargar Plazaopos</a>
+  <small id="nota">¿Aún no tienes la app? Descárgala gratis y vuelve a pulsar el enlace que te enviaron.</small>
 </div>
 <script>
   (function () {
     var IOS = "https://apps.apple.com/es/app/plazaopos/id6802785630";
     var ANDROID = "https://play.google.com/store/apps/details?id=es.plazaopos.app";
+    var q = location.search || "";
     var ua = navigator.userAgent || "";
     var esIos = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && "ontouchend" in document);
     var esAndroid = /Android/i.test(ua);
-    var tienda = document.getElementById("tienda"), otra = document.getElementById("otra");
-    if (esIos) { tienda.href = IOS; tienda.textContent = "Descargar en App Store"; }
-    else if (esAndroid) { tienda.href = ANDROID; tienda.textContent = "Descargar en Google Play"; }
-    else { tienda.href = IOS; tienda.textContent = "App Store"; otra.href = ANDROID; otra.textContent = "Google Play"; }
-    // En el móvil, a la tienda directamente tras un instante (si la app estuviera, ni se vería esta página).
-    if (esIos || esAndroid) setTimeout(function () { location.href = tienda.href; }, 1200);
+    var abrir = document.getElementById("abrir"), tienda = document.getElementById("tienda");
+    // Esquema propio de la app: abre la app aunque el enlace universal no haya saltado.
+    var esquema = "plazaopos://plazaopos.com/compartido" + q;
+    if (esAndroid) {
+      // Chrome: abre la app si está instalada; si no, va solo a Google Play.
+      var intent = "intent://plazaopos.com/compartido" + q +
+        "#Intent;scheme=plazaopos;package=es.plazaopos.app;S.browser_fallback_url=" +
+        encodeURIComponent(ANDROID) + ";end";
+      abrir.href = intent;
+      tienda.href = ANDROID; tienda.textContent = "Descargar en Google Play";
+      setTimeout(function () { location.href = intent; }, 300);
+    } else if (esIos) {
+      abrir.href = esquema;
+      tienda.href = IOS; tienda.textContent = "Descargar en App Store";
+    } else {
+      abrir.style.display = "none";
+      tienda.href = IOS; tienda.textContent = "App Store";
+      var g = tienda.cloneNode(true); g.href = ANDROID; g.textContent = "Google Play"; g.className = "b s";
+      tienda.parentNode.insertBefore(g, document.getElementById("nota"));
+      document.getElementById("txt").textContent = "Abre este enlace en tu móvil, con Plazaopos instalada.";
+    }
   })();
 </script>
 </body>
