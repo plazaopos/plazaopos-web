@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["CG4CT4T93B.es.plazaopos.app"],
+        "appID": "CG4CT4T93B.es.plazaopos.app",
+        "components": [{ "/": "/compartido*" }],
+        "paths": ["/compartido*"]
+      }
+    ]
+  }
+}
